@@ -1,0 +1,16 @@
+date,jdobs,filter,absmag,magpsf,sigmamagpsf,limmag,instrument,programid,reducedby,refsys,issub,isdiffpos 
+"2019 Mar 27",2458570.0253,"g", 99.0, 99.0,99.0, 15.86,"P48+ZTF","1","None","None",True,True
+"2019 Apr 01",2458574.9826,"r", 99.0, 99.0,99.0, 17.89,"P48+ZTF","1","None","None",True,True
+"2019 Apr 01",2458575.0191,"g", 99.0, 99.0,99.0, 18.10,"P48+ZTF","1","None","None",True,True
+"2019 Apr 08",2458581.9950,"g", 99.0, 99.0,99.0, 19.96,"P48+ZTF","1","None","None",True,True
+"2019 Apr 12",2458585.9418,"r", -16.57, 18.56,0.07, 19.88,"P48+ZTF","1","None","None",True,True
+"2019 Apr 15",2458588.9194,"r", -17.23, 17.90,0.06, 19.57,"P48+ZTF","1","None","None",True,True
+"2019 Apr 18",2458591.9793,"r", -17.60, 17.53,0.05, 19.17,"P48+ZTF","1","None","None",True,True
+"2019 Apr 19",2458592.9083,"r", -17.68, 17.45,0.08, 18.53,"P60+SEDM","None","Fremling Automated Pipeline PS1","PS1",True,True
+"2019 Apr 25",2458598.8801,"r", -17.99, 17.14,0.04, 19.41,"P48+ZTF","1","None","None",True,True
+"2019 Apr 27",2458600.8788,"g", -17.94, 17.19,0.02, 21.21,"P48+ZTF","2","None","None",True,True
+"2019 Apr 27",2458600.9541,"r", -18.01, 17.11,0.03, 21.37,"P48+ZTF","2","None","None",True,True
+"2019 Apr 28",2458601.8820,"g", -17.93, 17.19,0.02, 21.32,"P48+ZTF","2","None","None",True,True
+"2019 Apr 28",2458601.9426,"r", -18.03, 17.10,0.02, 21.43,"P48+ZTF","2","None","None",True,True
+"2019 May 04",2458607.8825,"r", -18.12, 17.01,0.03, 20.29,"P48+ZTF","1","None","None",True,True
+"2019 May 04",2458607.9228,"g", -18.02, 17.11,0.05, 20.72,"P48+ZTF","1","None","None",True,True

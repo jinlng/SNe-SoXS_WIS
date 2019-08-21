@@ -22,7 +22,7 @@ color_dict['LT']='b'
 color_dict['P60']='#e17701'
 color_dict['P200']='#ff028d'
 color_dict['LCOGT1M']='C'
-color_dict['APO']='y'
+color_dict['ARC']='y'
 color_dict['Keck1']='g'
 color_dict['WHT']='M'
 
@@ -113,7 +113,7 @@ ax = plt.gca()
 handles, labels = ax.get_legend_handles_labels()
 for i,j in enumerate(annotations):
     ax.annotate(phases[i],xy = (annotations[::1][i]), fontsize=13)
-plt.title('ZTF18aavskep', fontsize=20)
+plt.title('SN 2018bwr', fontsize=20)
 plt.xlim(3000,11000)
 plt.ylabel(r'$\rm{flux [erg/sec/cm^2/\AA]}$', fontsize=20)
 plt.xlabel(r'wavelength ($\AA$)', fontsize=20)

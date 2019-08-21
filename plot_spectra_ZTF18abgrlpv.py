@@ -72,7 +72,7 @@ for i,j in linesx.items():
 ax = plt.gca()
 handles, labels = ax.get_legend_handles_labels()
 ax.annotate(phases,xy = ((9300,0.5e-48)), fontsize=13)
-plt.title('ZTF18abgrlpv', fontsize=20)
+plt.title('SN 2018lpu', fontsize=20)
 #pylab.ylim(-16.5,-9.7)
 plt.xlim(3000,11000)
 plt.ylabel(r'$\rm{flux [erg/sec/cm^2/\AA ]}$', fontsize=20)

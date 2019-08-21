@@ -1,6 +1,5 @@
 """********************************************************
-Need to update the light curve in order to plot the 3rd sp-
-ectrum, 01.05.2019
+
 ********************************************************"""
 __author__ = 'Jingyi'
 
@@ -65,9 +64,16 @@ spec_3 = class_spectrum.spectrum(path_to_data=
 spec_3_cal = spec_3.calibrate(array_of_calibrating_data=P48_r_array,
     filter_family='ztf_p48',filter_name='r_p48',filters_directory=filters_directory)
 
+### 4 ###
+spec_4 = class_spectrum.spectrum(path_to_data=
+    '/home/jinlng/test_dir/Type_IIn/ZTF19aaozsuh/ZTF19aaozsuh_20190529_NOT_v1.ascii',
+    instrument='NOT',skiprows=0,time='2019-05-29T00:37:39.393',time_format='utc',show=False)
+spec_4_cal = spec_4.calibrate(array_of_calibrating_data=P48_r_array,
+    filter_family='ztf_p48',filter_name='r_p48',filters_directory=filters_directory)
 
-spectra = [spec_1, spec_2, spec_3]
-spectra_cal = [spec_1_cal, spec_2_cal, spec_3_cal]
+
+spectra = [spec_1, spec_2, spec_3, spec_4]
+spectra_cal = [spec_1_cal, spec_2_cal, spec_3_cal, spec_4_cal]
 
 
 dates = []
@@ -77,15 +83,14 @@ for i in spectra[::-1]:
 
 print('there are {0} spectra_cal in total'.format(len(spectra_cal)))
 
-offsets = [0, np.max(spectra_cal[0][:,1])*0.85, np.max(spectra_cal[0][:,1])*0.85+np.max(spectra_cal[1][:,1])*0.85]
+offsets = [0, np.max(spectra_cal[0][:,1])*0.2, np.max(spectra_cal[0][:,1])*0.35+np.max(spectra_cal[1][:,1])*0.5,
+            np.max(spectra_cal[0][:,1])*0.5+np.max(spectra_cal[1][:,1])*0.5+np.max(spectra_cal[2][:,1])*0.61]
 
 phases = ['+'+str(round(spectra[i].date_jd()-explosion_date,2)) for i in range(len(spectra))]
-annotations = [(spec_1_cal[-1, 0]+100,np.min(spec_1_cal)+offsets[2]),
-            (spec_2_cal[-1, 0]+100,np.min(spec_2_cal)+offsets[1]),
-            (spec_3_cal[-1, 0]+100,np.min(spec_3_cal)+offsets[0])]
-#annotations = [(spec_2_cal[-1, 0]+100,np.mean(spec_1_cal[:,1])+offsets[0]),
-#                (spec_1_cal[-1, 0]+100,np.mean(spec_2_cal[:,1])+offsets[1]),
-#                ]
+annotations = [(spec_1_cal[-1, 0]+100,np.min(spec_1_cal)+offsets[3]),
+            (spec_2_cal[-1, 0]+100,np.min(spec_2_cal)+offsets[2]),
+            (spec_3_cal[-1, 0]+100,np.mean(spec_3_cal[:,1])*0.7+offsets[1]),
+            (spec_4_cal[-1, 0]+100,np.min(spec_4_cal)+offsets[0])]
 
 
 ### smoothing ###
@@ -115,10 +120,11 @@ for i,j in linesx.items():
 ax = plt.gca()
 handles, labels = ax.get_legend_handles_labels()
 for i,j in enumerate(annotations):
-    ax.annotate(phases[i],xy = (annotations[::-1][i]), fontsize=13)
-plt.title('ZTF19aaozsuh',fontsize=20)
+    ax.annotate(phases[i],xy = (annotations[i]), fontsize=13)
+plt.title('SN 2019dde',fontsize=20)
 #plt.ylim(np.min(spec_1_cal[:,1]),np.max(spec_2_cal[:,1])+offsets[1])
 plt.xlim(3000,11000)
+plt.ylim(-0.05e-15,1.9e-15)
 plt.ylabel(r'$\rm{flux [erg/sec/cm^2/\AA ]}$', fontsize=20)
 plt.xlabel(r'wavelength ($\AA$)', fontsize=20)
 plt.grid()

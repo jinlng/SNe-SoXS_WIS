@@ -126,7 +126,7 @@ ax = plt.gca()
 handles, labels = ax.get_legend_handles_labels()
 for i,j in enumerate(annotations):
     ax.annotate(phases[i],xy = (annotations[i]), fontsize=13)
-plt.title('ZTF18acwzyor', fontsize=20)
+plt.title('SN 2018kag', fontsize=20)
 #plt.ylim(-17.5,-12.5)
 #plt.ylim(np.min(spec_1_cal[:,1])*0.5,np.max(spec_3_cal[:,1])+offsets[2]*1.1)  
 plt.xlim(3000,11000)

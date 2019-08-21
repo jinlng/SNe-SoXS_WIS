@@ -32,7 +32,7 @@ linesx = {r'$H_{\alpha}$': 6563, r'$H_{\beta}$': 4861, r'$H_{\gamma}$': 4341}
     #, r'$H_{\delta}$': 4102,r'$H_{\epsilon}$': 3970, r'$H_{\zeta}$': 3889, r'$H_{\eta}$': 3835}
 distance_modulus = 36.5       # checked
 distance_pc = distances_conversions.DM_to_pc(distance_modulus)   # sn distance in pc
-EBV = 0.037233      # checked
+EBV = 0.037233      # checked 
 explosion_date = 2458565.311 # checked
 data_dicts = Read_data.read_data_Marshall_simple(
     '/home/jinlng/test_dir/Type_IIn/ZTF19aanfqug/data_Marshal.txt', # good to go
@@ -116,7 +116,7 @@ ax = plt.gca()
 handles, labels = ax.get_legend_handles_labels()
 for i,j in enumerate(annotations):
     ax.annotate(phases[i],xy = (annotations[::-1][i]), fontsize=13)
-plt.title('ZTF19aanfqug', fontsize=20)
+plt.title('SN 2019ctt', fontsize=20)
 #pylab.ylim(-16.5,-9.7)
 plt.xlim(3000,11000)
 plt.ylabel(r'$\rm{flux [erg/sec/cm^2/\AA ]}$', fontsize=20)

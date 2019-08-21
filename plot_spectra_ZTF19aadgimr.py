@@ -107,7 +107,7 @@ ax = plt.gca()
 handles, labels = ax.get_legend_handles_labels()
 for i,j in enumerate(annotations):
     ax.annotate(phases[i],xy = (annotations[i]), fontsize=13)
-plt.title('ZTF19aadgimr', fontsize=20)
+plt.title('SN 2019qt', fontsize=20)
 #plt.ylim(-16,-13.7)
 plt.xlim(3000,11000)
 plt.ylabel(r'$\rm{flux [erg/sec/cm^2/\AA ]}$', fontsize=20)

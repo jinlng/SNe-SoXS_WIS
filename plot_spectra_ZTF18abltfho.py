@@ -103,7 +103,7 @@ handles, labels = ax.get_legend_handles_labels()
 
 for i,j in enumerate(annotations):
     ax.annotate(phases[i],xy = (annotations[::1][i]), fontsize=13)
-plt.title('ZTF18abltfho', fontsize=20)
+plt.title('SN 2018fdt', fontsize=20)
 #plt.ylim(np.min(spec_1_cal[:,1]*0.5),np.max(spec_2_cal[:,1])+offsets[1])
 plt.xlim(3000,11000)
 plt.ylabel(r'$\rm{flux [erg/sec/cm^2/\AA ]}$', fontsize=20)
